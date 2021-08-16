@@ -1,0 +1,94 @@
+<h2>Unix Match. Part 2</h2>
+<!-- Describe task in general -->
+<p>
+ Sometimes you find yourself in a situation when, among a huge number of files on your computer or in a separate folder, you need to find files of a certain type. For example, images with the extension '.jpg' or documents with the extension '.txt', or even files that have the word 'butterfly' in their name. Doing this manually can be time-consuming. 'Matching' or patterns for searching files by a specific mask are just what you need for these sort of challenges.
+ <br/>
+ This mission will help you understand how this works.
+</p>
+<p>
+ You need to find out if the given unix pattern matches the given filename.
+</p>
+<p>
+ Here is a small table that shows symbols that can be used in patterns.
+</p>
+<table style="border:1px solid black">
+ <tr>
+  <th>
+   [seq]
+  </th>
+  <td>
+   matches any character in seq, for example [123] means any character - '1', '2' or '3'
+  </td>
+ </tr>
+ <tr>
+  <th>
+   [!seq]
+  </th>
+  <td>
+   matches any character not in seq, for example [!123] means any character except '1', '2' and '3'
+  </td>
+ </tr>
+ <tr>
+  <th>
+   []
+  </th>
+  <td>
+   seq without any chars will never match
+  </td>
+ </tr>
+</table>
+<p>
+ Note that the expression in one pair of square brackets responds only
+for 1 character. So
+ <pre>('0123', '[!abc]123') == True, but ('00123', '[!abc]123') = False</pre>
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments. Both are strings.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Bool.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">unix_match('somefile.txt', 'somefile.txt') == True
+unix_match('1name.txt', '[!abc]name.txt') == True
+unix_match('log1.txt', 'log[1234567890].txt') == True
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ <i>
+  in the unix-shell
+ </i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  0 &lt; len(strings) &lt; 100
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/unix-match-part-2/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/unix-match-part-2">See the task on CheckiO</a></p>

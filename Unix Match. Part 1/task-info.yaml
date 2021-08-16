@@ -1,0 +1,28 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "import re\n\ndef unix_match(filename: str, pattern: str) -> bool:\n    pattern\
+    \ = pattern.replace(\".\", \"\\.\").replace(\"*\", \".*\").replace(\"?\", \".\"\
+    )\n    return False if re.match(r''+pattern+'', filename) == None else True\n\n\
+    \nif __name__ == '__main__':\n    print(\"Example:\")\n    print(unix_match('somefile.txt',\
+    \ '*'))\n    \n    # These \"asserts\" are used for self-checking and not for\
+    \ an auto-testing\n    assert unix_match('somefile.txt', '*') == True\n    assert\
+    \ unix_match('other.exe', '*') == True\n    assert unix_match('my.exe', '*.txt')\
+    \ == False\n    assert unix_match('log1.txt', 'log?.txt') == True\n    assert\
+    \ unix_match('log12.txt', 'log?.txt') == False\n    assert unix_match('log12.txt',\
+    \ 'log??.txt') == True\n    print(\"Coding complete? Click 'Check' to earn cool\
+    \ rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "import re\n\ndef unix_match(filename: str, pattern: str) -> bool:\n    pattern\
+  \ = pattern.replace(\".\", \"\\.\").replace(\"*\", \".*\").replace(\"?\", \".\"\
+  )\n    return False if re.match(r''+pattern+'', filename) == None else True\n\n\n\
+  if __name__ == '__main__':\n    print(\"Example:\")\n    print(unix_match('somefile.txt',\
+  \ '*'))\n    \n    # These \"asserts\" are used for self-checking and not for an\
+  \ auto-testing\n    assert unix_match('somefile.txt', '*') == True\n    assert unix_match('other.exe',\
+  \ '*') == True\n    assert unix_match('my.exe', '*.txt') == False\n    assert unix_match('log1.txt',\
+  \ 'log?.txt') == True\n    assert unix_match('log12.txt', 'log?.txt') == False\n\
+  \    assert unix_match('log12.txt', 'log??.txt') == True\n    print(\"Coding complete?\
+  \ Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 42829

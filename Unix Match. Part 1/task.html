@@ -1,0 +1,84 @@
+<h2>Unix Match. Part 1</h2>
+<!-- Describe task in general -->
+<p>
+ Sometimes you find yourself in a situation when, among a huge number of files on your computer or in a separate folder, you need to find files of a certain type. For example, images with the extension '.jpg' or documents with the extension '.txt', or even files that have the word 'butterfly' in their name. Doing this manually can be time-consuming. 'Matching' or patterns for searching files by a specific mask are just what you need for these sort of challenges.
+ <br/>
+ This mission will help you understand how this works.
+</p>
+<p>
+ You need to find out if the given unix pattern matches the given filename.
+</p>
+<p>
+ Let me show you what I mean by matching the filenames in the unix-shell. For example, * matches everything and *.txt matches all of the files that have txt extension. Here is a small table that shows symbols that can be used in patterns.
+</p>
+<table style="border:1px solid black">
+ <tr>
+  <th>
+   *
+  </th>
+  <td>
+   matches everything
+  </td>
+ </tr>
+ <tr>
+  <th>
+   ?
+  </th>
+  <td>
+   matches any single character
+  </td>
+ </tr>
+</table>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments. Both are strings.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Bool.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">unix_match('somefile.txt', '*') == True
+unix_match('other.exe', '*') == True
+unix_match('my.exe', '*.txt') == False
+unix_match('log1.txt', 'log?.txt') == True
+unix_match('log12.txt', 'log?.txt') == False
+unix_match('log12.txt', 'log??.txt') == True
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ <i>
+  in the unix-shell
+ </i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  0 &lt; len(strings) &lt; 100
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/unix-match-part-1/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/unix-match-part-1">See the task on CheckiO</a></p>

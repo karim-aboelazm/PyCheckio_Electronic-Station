@@ -1,0 +1,62 @@
+<h2>Acceptable Password IV</h2>
+<!-- Describe task in general -->
+<p>
+ In this mission you need to create a password verification function.
+</p>
+<p>
+ Those are the verification conditions:
+</p>
+<ul>
+ <li>
+  the length should be bigger than 6;
+ </li>
+ <li>
+  should contain at least one digit, but it cannot consist of just digits;
+ </li>
+ <li>
+  if the password is longer than 9 - previous rule (about one digit), is not required.
+ </li>
+</ul>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A bool.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">is_acceptable_password('short') == False
+is_acceptable_password('short54') == True
+is_acceptable_password('muchlonger') == True
+is_acceptable_password('ashort') == False
+is_acceptable_password('muchlonger5') == True
+is_acceptable_password('sh5') == False
+is_acceptable_password('1234567') == False
+is_acceptable_password('12345678910') == True
+</pre>
+ 
+</div>
+<p class="for_info_only">
+ <strong>
+  How it’s used:
+ </strong>
+ <i>
+  For password verification form. Also it's good to learn how the task can be evaluated.
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/acceptable-password-iv/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/acceptable-password-iv">See the task on CheckiO</a></p>

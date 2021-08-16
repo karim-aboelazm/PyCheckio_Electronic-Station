@@ -1,0 +1,25 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(number: int) -> int:\n    new_list = list(str(number))\n    exclude_strlist\
+    \ = []\n    for i in new_list:\n        if int(i) != 0:\n            exclude_strlist.append(int(i))\n\
+    \    a = 1\n    for i in range(len(exclude_strlist)):\n        a *= exclude_strlist[i]\n\
+    \    return a\n\n\n\n\n\nif __name__ == '__main__':\n    print('Example:')\n \
+    \   print(checkio(123405))\n    \n    # These \"asserts\" using only for self-checking\
+    \ and not necessary for auto-testing\n    assert checkio(123405) == 120\n    assert\
+    \ checkio(999) == 729\n    assert checkio(1000) == 1\n    assert checkio(1111)\
+    \ == 1\n    print(\"Coding complete? Click 'Check' to review your tests and earn\
+    \ cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def checkio(number: int) -> int:\n    new_list = list(str(number))\n    exclude_strlist\
+  \ = []\n    for i in new_list:\n        if int(i) != 0:\n            exclude_strlist.append(int(i))\n\
+  \    a = 1\n    for i in range(len(exclude_strlist)):\n        a *= exclude_strlist[i]\n\
+  \    return a\n\n\n\n\n\nif __name__ == '__main__':\n    print('Example:')\n   \
+  \ print(checkio(123405))\n    \n    # These \"asserts\" using only for self-checking\
+  \ and not necessary for auto-testing\n    assert checkio(123405) == 120\n    assert\
+  \ checkio(999) == 729\n    assert checkio(1000) == 1\n    assert checkio(1111) ==\
+  \ 1\n    print(\"Coding complete? Click 'Check' to review your tests and earn cool\
+  \ rewards!\")\n"
+seconds_from_change: 118880

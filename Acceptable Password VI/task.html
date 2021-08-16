@@ -1,0 +1,73 @@
+<h2>Acceptable Password VI</h2>
+<!-- Describe task in general -->
+<p>
+ In this mission you need to create a password verification function.
+</p>
+<p>
+ Those are the verification conditions:
+</p>
+<ul>
+ <li>
+  the length should be bigger than 6;
+ </li>
+ <li>
+  should contain at least one digit, but it cannot consist of just digits;
+ </li>
+ <li>
+  having numbers or containing just numbers does not apply to the password longer than 9.
+ </li>
+ <li>
+  a string should not contain the word "password" in any case;
+ </li>
+ <li>
+  should contain 3 different letters (or digits) even if it is longer than 10
+ </li>
+</ul>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A bool.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">is_acceptable_password('short') == False
+is_acceptable_password('short54') == True
+is_acceptable_password('muchlonger') == True
+is_acceptable_password('ashort') == False
+is_acceptable_password('muchlonger5') == True
+is_acceptable_password('sh5') == False
+is_acceptable_password('1234567') == False
+is_acceptable_password('12345678910') == True
+is_acceptable_password('password12345') == False
+is_acceptable_password('PASSWORD12345') == False
+is_acceptable_password('pass1234word') == True
+is_acceptable_password('aaaaaa1') == False
+is_acceptable_password('aaaaaabbbbb') == False
+</pre>
+ 
+</div>
+<p class="for_info_only">
+ <strong>
+  How it’s used:
+ </strong>
+ <i>
+  For password verification form. Also it's good to learn how the task can be evaluated.
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/acceptable-password-vi/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/acceptable-password-vi">See the task on CheckiO</a></p>

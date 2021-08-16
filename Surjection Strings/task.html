@@ -1,0 +1,63 @@
+<h2>Surjection Strings</h2>
+<!-- Describe task in general -->
+<p>
+ <i>
+  Maybe it's a cipher? Maybe, but we don’t know for sure.
+ </i>
+</p>
+<p>
+ <i>
+  Maybe you can call it
+  <a href="https://en.wikipedia.org/wiki/String_operations#String_homomorphism">
+   "homomorphism"
+  </a>
+  ? I wish I knew this word before.
+ </i>
+</p>
+<p>
+ You need to check that the 2 given strings are isometric. This means that a character from one string can become a match for characters from another string.
+</p>
+<p>
+ One character from one string can correspond only to one character from another string. Two or more characters of one string can correspond to one character of another string, but not vice versa.
+</p>
+<div class="for_info_only" style="text-align: center">
+ <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/835d2a2492b24aa682da086afed4f6a1/example.png" style="max-height: 350px"/>
+</div>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments. Both strings.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Boolean.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">isometric_strings('add', 'egg') == True
+isometric_strings('foo', 'bar') == False
+isometric_strings('', '') == True
+isometric_strings('all', 'all') == True
+isometric_strings('gogopy', 'doodle') == False
+</pre>
+ 
+</div>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ both strings are the same length
+</p>
+
+<p><a href="https://py.checkio.org/mission/isometric-strings/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/isometric-strings">See the task on CheckiO</a></p>

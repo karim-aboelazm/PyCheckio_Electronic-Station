@@ -1,0 +1,130 @@
+<h2>Mathematically Lucky Tickets</h2>
+<div class="story">
+ <p>
+  Sofia cracks open the treasure chest. Inside are slips of paper with six digit numbers on each slip.
+ </p>
+ <p>
+  “What’s this?” She asks, quizzed. “Nikola, are these what I think they are?”
+ </p>
+ <p>
+  “They look like lucky tickets! Look at how many there are, there must be hundreds! Any of them could be a
+        winner!”
+ </p>
+ <p>
+  “Oh man! We could turn them into the lucky ticket commission and collect the reward! I could pay my dad back for
+        the spaceship!”
+ </p>
+ <p>
+  “Er, you didn’t buy it yourself?” Stephen asked Sofia.
+ </p>
+ <p>
+  “Well, not as such. I borrowed the money from my dad on the condition that I’d pay him back. Now maybe I can!”
+ </p>
+ <p>
+  Stephen sighed. “Well, let’s check the tickets to see if we have a winner.”
+ </p>
+ <p>
+  “I have an idea. I brought my number cruncher 5000 along. I’ll just write a quick function to find out if we won
+        so we don’t have to do it all manually.” Nikola interjected.
+ </p>
+ <p>
+  “Quickly, quickly!” Sofia said. “I’m so excited!”
+ </p>
+</div>
+<p>
+ The "Mathematically lucky tickets" concept is similar to the idea of the Russian "Lucky tickets". It refers to the old
+    public transport tickets that had 6-digit numbers printed on them.
+</p>
+<p>
+ You are given a ticket number and the combination of its digits can become a mathematical expression by following
+    these rules.
+</p>
+<pre>
+    1. The digits of the number can be split into groups of numbers.
+    2. You cannot change the order of groups or digits.
+    3. Each group is treated as a one integer number. (1 and 2 would become 12, etc.)
+    4. Operational signs (+, -, * and /) are placed between the groups.
+    5. Parenthesis are placed around subexpressions to eliminate any ambiguity
+    in the evaluation order.
+
+</pre>
+<p>
+ For example:
+</p>
+<pre>    * 238756 -&gt; (2 * (38 + ((7 + 5) * 6)))
+    * 000859 -&gt; (0 + (00 + (8 + (5 + 9))))
+    * 561403 -&gt; (5 * (6 + (1 + (40 / 3))))
+
+</pre>
+<p>
+ The ticket is considered
+ <em>
+  mathematically lucky
+ </em>
+ if no combination of
+    its
+    digits evaluates to 100. For example:
+</p>
+<pre>    * 000000 is obviously lucky, no matter which combination you construct it always
+    evaluates to zero,
+    * 707409 and 561709 are also lucky because they cannot evaluate to 100
+    * 595347 is not lucky: (5 + ((9 * 5) + (3 + 47))) = 100
+    * 593347 is not lucky: (5 + ((9 / (3 / 34)) - 7)) = 100
+    * 271353 is not lucky: (2 - (7 * (((1 / 3) - 5) * 3))) = 100
+
+</pre>
+<p>
+ The combination has to evaluate to 100 exactly to be counted as unlucky. Fractions can
+    occur in intermediate calculations (like in above examples for 593347 and
+    271353) but the result must be an integer.
+</p>
+<p>
+ <strong>
+  Task:
+ </strong>
+ Given a 6-digit number of the ticket, the program should determine whether
+    it is mathematically lucky or not.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ 6 digits as a string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Is it mathematically lucky or not as a boolean.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">checkio('000000') == True
+checkio('707409') == True
+checkio('595347') == False
+checkio('271353') == False
+</pre>
+ 
+ <p class="for_info_only">
+  <strong>
+   How it is used:
+  </strong>
+  This is a nice game to improve mind-calculation skills.
+    If you have coder or math-geek friends, then you can give them this as a challenge.
+    Who’s code will check digits faster than the others? After solving this task you will have the skills to cheat! ;-)
+ </p>
+ <p>
+  <strong>
+   Precondition:
+  </strong>
+  |digits| == 6
+  <br/>
+ </p>
+</div>
+<p><a href="https://py.checkio.org/mission/mathematically-lucky-tickets/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/mathematically-lucky-tickets">See the task on CheckiO</a></p>

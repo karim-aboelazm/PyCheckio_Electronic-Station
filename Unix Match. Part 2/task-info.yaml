@@ -1,0 +1,43 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def unix_match(filename: str, pattern: str) -> bool:\n    a = filename\n\
+    \    b = pattern\n    import re\n    rr = True\n    bb = re.findall('(\\[.*?\\\
+    ])', b)\n    mm = re.sub('(\\[.*?\\])','$',b)\n\n    x= []\n    for i in mm:\n\
+    \        if i != '$':\n    \t\tx.append(i)\n    qita = ''.join(x)\n    tiqu =\
+    \ []\n    if len(a) != len(mm):\n    \trr = False\n    else:\n    \tfor i in range(0,\
+    \ len(mm)):\n    \t\tif mm[i] == '$':\n    \t\t\ttiqu.append(a[i])\n    \tfor\
+    \ i in range(0, len(tiqu)):\n    \t\tif qita[i] not in a:\n    \t\t\trr = False\n\
+    \    \t\t\tbreak\n    \t\telif '!' in bb[i] and tiqu[i] in bb[i]:\n    \t\t\t\
+    rr = False\n    \t\t\tbreak\n    \t\telif '!' not in bb[i] and tiqu[i] not in\
+    \ bb[i]:\n    \t\t\trr = False\n    \t\t\tbreak\n    if bb == [] and b != a:\n\
+    \    \trr = False\n    if a == b:\n    \trr = True\n    return rr\n\n\n\nif __name__\
+    \ == '__main__':\n    print(\"Example:\")\n    print(unix_match('somefile.txt',\
+    \ '*'))\n    \n    # These \"asserts\" are used for self-checking and not for\
+    \ an auto-testing\n    assert unix_match('somefile.txt', 'somefile.txt') == True\n\
+    \    assert unix_match('1name.txt', '[!abc]name.txt') == True\n    assert unix_match('log1.txt',\
+    \ 'log[!0].txt') == True\n    assert unix_match('log1.txt', 'log[1234567890].txt')\
+    \ == True\n    assert unix_match('log1.txt', 'log[!1].txt') == False\n    print(\"\
+    Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def unix_match(filename: str, pattern: str) -> bool:\n    a = filename\n  \
+  \  b = pattern\n    import re\n    rr = True\n    bb = re.findall('(\\[.*?\\])',\
+  \ b)\n    mm = re.sub('(\\[.*?\\])','$',b)\n\n    x= []\n    for i in mm:\n    \
+  \    if i != '$':\n    \t\tx.append(i)\n    qita = ''.join(x)\n    tiqu = []\n \
+  \   if len(a) != len(mm):\n    \trr = False\n    else:\n    \tfor i in range(0,\
+  \ len(mm)):\n    \t\tif mm[i] == '$':\n    \t\t\ttiqu.append(a[i])\n    \tfor i\
+  \ in range(0, len(tiqu)):\n    \t\tif qita[i] not in a:\n    \t\t\trr = False\n\
+  \    \t\t\tbreak\n    \t\telif '!' in bb[i] and tiqu[i] in bb[i]:\n    \t\t\trr\
+  \ = False\n    \t\t\tbreak\n    \t\telif '!' not in bb[i] and tiqu[i] not in bb[i]:\n\
+  \    \t\t\trr = False\n    \t\t\tbreak\n    if bb == [] and b != a:\n    \trr =\
+  \ False\n    if a == b:\n    \trr = True\n    return rr\n\n\n\nif __name__ == '__main__':\n\
+  \    print(\"Example:\")\n    print(unix_match('somefile.txt', '*'))\n    \n   \
+  \ # These \"asserts\" are used for self-checking and not for an auto-testing\n \
+  \   assert unix_match('somefile.txt', 'somefile.txt') == True\n    assert unix_match('1name.txt',\
+  \ '[!abc]name.txt') == True\n    assert unix_match('log1.txt', 'log[!0].txt') ==\
+  \ True\n    assert unix_match('log1.txt', 'log[1234567890].txt') == True\n    assert\
+  \ unix_match('log1.txt', 'log[!1].txt') == False\n    print(\"Coding complete? Click\
+  \ 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 41561
